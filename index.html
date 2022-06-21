@@ -1,14 +1,134 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manipulacao de objetos JS</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
+
 <body>
-    <h1 id="titulo">TESTE</h1>
-    <button id="btn">Registrar notas</button>
-    <script src="./index.js"></script>
+  <form class="row g-3" style="padding: 5%;" id="formulario">
+    <div class="col-md-2">
+      <label for="nome" class="form-label">Nome</label>
+      <input type="test" class="form-control" id="nome" name="nome">
+    </div>
+    <div class="col-md-10">
+      <label for="sobrenome" class="form-label">Sobrenome</label>
+      <input type="test" class="form-control" id="sobrenome" name="sobrenome">
+    </div>
+    <div class="col-md-12">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="nome@email.com">
+    </div>
+    <div class="col-md-6">
+      <label for="senha" class="form-label">Senha</label>
+      <input type="password" class="form-control" id="senha" name="senha">
+    </div>
+    </div>
+    <div class="col-md-6">
+      <label for="senha2" class="form-label">Repita a senha</label>
+      <input type="password" class="form-control" id="senha2" name="senha2">
+    </div>
+    <div class="col-5">
+      <label for="bairro" class="form-label">Bairro</label>
+      <input type="text" class="form-control" id="bairro" name="bairro">
+    </div>
+    <div class="col-3">
+      <label for="rua" class="form-label">Rua</label>
+      <input type="text" class="form-control" id="rua" name="rua">
+    </div>
+    <div class="col-2">
+      <label for="endereco" class="form-label">Número</label>
+      <input type="text" class="form-control" id="numeroCasa" name="numeroCasa">
+    </div>
+    <div class="col-2">
+      <label for="complemento" class="form-label">Complemento</label>
+      <input type="text" class="form-control" id="complemento" name="complemento">
+    </div>
+    <div class="col-md-6">
+      <label for="cidade" class="form-label">Cidade</label>
+      <input type="text" class="form-control" id="cidade" name="cidade">
+    </div>
+    <div class="col-md-4">
+      <label for="estado" class="form-label">Estado</label>
+      <select id="estado" class="form-select" name="estado">
+        <option selected>Escolha...</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceara</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Cep</label>
+      <input type="text" class="form-control" id="cep" name="cep">
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="termosServico" name="termosServico">
+        <label class="form-check-label" for="termosServico">
+          Aceito os termos de serviço
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="atualizacoes" name="atualizacoes">
+        <label class="form-check-label" for="atualizacoes">
+          Quero receber atualizações
+        </label>
+      </div>
+    </div>
+    <div class="col-  12">
+      <button type="submit" class="btn btn-primary">Registrar </button>
+      <input class="btn btn-primary" type="reset" value="Reset">
+    </div>
+    <hr style="margin-top: 50px;">
+    <table class="table" id="dados">
+      <tr>
+        <td>NOME COMPLETO</td>
+        <td>EMAIL</td>
+        <td>ENDEREÇO</td>
+        <td>ESTADO</td>
+        <td>CIDADE</td>
+        <td>CEP</td>
+      </tr>
+    </table>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+  <script src="./index.js"></script>
 </body>
+
 </html>
